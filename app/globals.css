@@ -1,0 +1,90 @@
+:root { --ink:#12372d; --green:#176b50; --lime:#d8ef79; --cream:#f7f5ec; --orange:#ed9a57; }
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { margin:0; color:var(--ink); background:#fbfcf8; font-family:Arial, Helvetica, sans-serif; }
+a { color:inherit; text-decoration:none; }
+button, input { font:inherit; }
+.container { width:min(1180px, calc(100% - 48px)); margin-inline:auto; }
+.nav { height:92px; display:flex; align-items:center; justify-content:space-between; }
+.brand { display:flex; align-items:center; gap:10px; font-size:13px; line-height:1.05; font-weight:700; text-transform:uppercase; letter-spacing:.5px; }
+.brand strong { color:var(--green); }
+.brandMark { display:grid; place-items:center; width:44px; height:44px; border-radius:50%; background:var(--ink); color:white; font-family:Georgia, serif; font-size:14px; }
+.navLinks { display:flex; gap:34px; font-size:14px; font-weight:700; }
+.navLinks a:hover { color:var(--green); }
+.navCta, .cta>a { background:var(--lime); border:1px solid var(--ink); border-radius:4px; padding:14px 18px; font-weight:800; font-size:14px; box-shadow:3px 3px 0 var(--ink); }
+.navCta span, .cta>a span { margin-left:18px; }
+.hero { background:var(--cream); overflow:hidden; border-top:1px solid #dedfd3; }
+.heroGrid { min-height:560px; display:grid; grid-template-columns:52% 48%; align-items:center; }
+.heroCopy { padding:56px 30px 70px 0; }
+.eyebrow, .kicker { font-size:11px; letter-spacing:2.2px; font-weight:900; }
+.eyebrow { display:flex; align-items:center; gap:9px; color:var(--green); }
+.eyebrow span { width:24px; height:2px; background:var(--orange); }
+h1 { margin:18px 0 20px; font-family:Georgia, 'Times New Roman', serif; font-size:72px; line-height:.96; letter-spacing:-3px; }
+h1 em { color:var(--green); font-weight:400; }
+.heroCopy>p { max-width:520px; font-size:18px; line-height:1.6; color:#52645e; }
+.searchBox { display:flex; width:min(580px,100%); height:66px; background:white; border:1px solid #b9c1ba; border-radius:5px; margin-top:30px; box-shadow:0 12px 30px rgba(18,55,45,.08); }
+.searchField { flex:1; display:flex; align-items:center; gap:12px; padding:0 18px; }
+.searchField span { font-size:24px; transform:rotate(-15deg); }
+.searchField input { width:100%; border:0; outline:0; color:var(--ink); }
+.searchBox button { margin:7px; border:0; border-radius:4px; background:var(--green); color:white; padding:0 22px; font-weight:800; }
+.searchBox button span { margin-left:12px; }
+.popular { margin-top:16px; font-size:12px; color:#77847f; }
+.popular a { margin-left:8px; color:var(--ink); text-decoration:underline; text-underline-offset:3px; }
+.heroVisual { position:relative; height:560px; }
+.sun { position:absolute; width:110px; height:110px; border-radius:50%; background:var(--lime); right:50px; top:75px; }
+.hill { position:absolute; border-radius:50% 50% 0 0; }
+.hillOne { width:460px; height:260px; background:#b8d5aa; bottom:0; right:-80px; transform:rotate(-8deg); }
+.hillTwo { width:380px; height:220px; background:#86b29a; bottom:-45px; right:180px; transform:rotate(12deg); }
+.road { position:absolute; width:170px; height:320px; bottom:-110px; right:110px; background:#e7b96f; clip-path:polygon(43% 0,57% 0,100% 100%,0 100%); }
+.townCard, .workerCard { position:absolute; z-index:2; display:flex; align-items:center; background:white; border:1px solid #d9ddd5; border-radius:6px; box-shadow:0 14px 30px rgba(18,55,45,.13); }
+.townCard { width:310px; height:82px; left:-30px; bottom:76px; padding:14px; }
+.townIcon { display:grid; place-items:center; width:48px; height:48px; border-radius:50%; background:#eef3e7; margin-right:12px; }
+.townCard div, .workerCard div { display:flex; flex-direction:column; }
+.townCard strong { font-family:Georgia,serif; font-size:18px; }
+.townCard small, .workerCard small { color:#7b8782; margin-top:5px; }
+.townCard b { margin-left:auto; color:var(--orange); font-size:22px; }
+.workerCard { width:230px; height:72px; right:-18px; top:210px; padding:10px; }
+.avatar { display:grid; place-items:center; width:48px; height:48px; border-radius:50%; background:var(--orange); color:white; font-weight:900; margin-right:10px; }
+.stats { height:112px; display:grid; grid-template-columns:repeat(4,1fr); align-items:center; }
+.stats div { display:flex; align-items:center; gap:12px; border-right:1px solid #dde1d8; padding-left:35px; }
+.stats div:last-child { border:0; }
+.stats strong { font-family:Georgia,serif; font-size:32px; }
+.stats span { max-width:80px; font-size:12px; color:#6f7c77; }
+.section { padding-top:84px; padding-bottom:90px; }
+.sectionHead { display:flex; justify-content:space-between; align-items:end; margin-bottom:34px; }
+.sectionHead h2, .cta h2 { margin:8px 0 0; font-family:Georgia,serif; font-size:44px; letter-spacing:-1.5px; }
+.sectionHead>a { font-size:13px; font-weight:800; border-bottom:1px solid var(--ink); padding-bottom:5px; }
+.categoryGrid { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+.category { height:94px; display:flex; align-items:center; border:1px solid #dde2da; border-radius:5px; background:white; padding:16px; transition:.2s; }
+.category:hover { transform:translateY(-3px); border-color:var(--green); box-shadow:0 10px 20px rgba(18,55,45,.07); }
+.categoryIcon { display:grid; place-items:center; width:56px; height:56px; border-radius:50%; background:#edf2df; color:var(--green); font-size:21px; margin-right:14px; }
+.category div { display:flex; flex-direction:column; }
+.category small { margin-top:6px; color:#87928d; }
+.category b { margin-left:auto; font-size:24px; }
+.jobsSection { background:var(--cream); }
+.jobGrid { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; }
+.jobCard { background:white; border:1px solid #dde1d7; border-radius:5px; padding:20px; }
+.jobTop { display:flex; justify-content:space-between; align-items:center; }
+.jobTop span { background:#edf2df; color:var(--green); border-radius:20px; padding:7px 10px; font-size:11px; font-weight:800; }
+.jobTop b { color:#949d99; font-size:10px; }
+.jobCard h3 { min-height:50px; font-family:Georgia,serif; font-size:21px; margin:24px 0 12px; }
+.jobCard p { color:#7b8782; font-size:12px; }
+.jobBottom { display:flex; justify-content:space-between; align-items:center; border-top:1px solid #eceee8; margin-top:22px; padding-top:16px; }
+.jobBottom strong { color:var(--green); }
+.jobBottom button { border:0; background:transparent; font-size:12px; font-weight:800; color:var(--ink); }
+.cta { margin-top:80px; margin-bottom:80px; min-height:230px; display:flex; align-items:center; justify-content:space-between; background:var(--green); color:white; border-radius:8px; padding:48px 60px; }
+.cta h2 { margin-top:10px; }
+.cta p { color:#d8e5df; }
+.cta>a { background:var(--lime); color:var(--ink); }
+footer { background:#102d25; color:white; }
+.footerInner { height:130px; display:flex; align-items:center; justify-content:space-between; }
+footer .brandMark { background:var(--lime); color:var(--ink); }
+footer .brand strong { color:var(--lime); }
+footer p { color:#b8c7c1; }
+footer small { color:#82978f; }
+@media(max-width:900px) {
+  .navLinks { display:none; } h1 { font-size:54px; } .heroGrid { grid-template-columns:1fr; }.heroVisual { height:420px; }.heroCopy { padding-right:0; }.stats { grid-template-columns:repeat(2,1fr); height:auto; padding:20px 0; }.stats div { padding:15px; }.categoryGrid { grid-template-columns:repeat(2,1fr); }.jobGrid { grid-template-columns:repeat(2,1fr); }.townCard { left:5%; }.workerCard { right:3%; }
+}
+@media(max-width:600px) {
+  .container { width:min(100% - 32px,1180px); }.nav { height:78px; }.navCta { padding:10px; }.navCta span { margin-left:6px; }.heroGrid { min-height:auto; }.heroCopy { padding:44px 0 30px; } h1 { font-size:46px; }.heroCopy>p { font-size:16px; }.searchBox { height:auto; flex-direction:column; padding:8px; }.searchField { height:50px; }.searchBox button { height:48px; }.heroVisual { height:350px; }.townCard { width:250px; left:0; }.workerCard { width:210px; top:170px; }.stats { display:none; }.section { padding:55px 0; }.sectionHead { align-items:start; }.sectionHead h2, .cta h2 { font-size:34px; }.sectionHead>a { display:none; }.categoryGrid { grid-template-columns:1fr; }.jobGrid { grid-template-columns:1fr; }.cta { margin:45px auto; width:calc(100% - 32px); padding:36px 24px; flex-direction:column; align-items:start; }.cta>a { margin-top:20px; }.footerInner { height:auto; min-height:170px; flex-direction:column; align-items:start; justify-content:center; gap:18px; }footer p { margin:0; }
+}
